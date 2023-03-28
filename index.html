@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mobile Canvas</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #display {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      margin: 0px;
+      padding: 4px;
+      font-family: monospace;
+      font-size: 16px;
+    }
+
+    canvas {
+        display: block;
+        background-color: #ffffff;
+        border: 1px solid black;
+        image-rendering: pixelated;
+        width: 256px;
+        height: 256px;
+    }
+
+    #show {
+      font-family: monospace;
+      font-size: 20px;
+    }
+
+    .control {
+        width: 64px;
+        height: 64px;
+        border: 1px solid black;
+    }
+
+    #screens {
+      display: grid;
+      grid-template-columns: repeat(2, 256px);
+      grid-template-rows: repeat(2, 256px);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(8, 64px);
+        grid-template-rows: repeat(4, 64px);
+        justify-content: center;
+        align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <script src="index.js"></script>
+  <pre id="display"></pre>
+  <button id="show"></button>
+  <div id="screens">
+    <canvas id="canvas0" width="256" height="256"></canvas>
+    <canvas id="canvas1" width="256" height="256"></canvas>
+    <canvas id="canvas2" width="256" height="256"></canvas>
+    <canvas id="canvas3" width="256" height="256"></canvas>
+  </div>
+  <div class="grid">
+    <canvas id="C00" class="control" width="64" height="64"></canvas>
+    <canvas id="C01" class="control" width="64" height="64"></canvas>
+    <canvas id="C02" class="control" width="64" height="64"></canvas>
+    <canvas id="C03" class="control" width="64" height="64"></canvas>
+    <canvas id="C04" class="control" width="64" height="64"></canvas>
+    <canvas id="C05" class="control" width="64" height="64"></canvas>
+    <canvas id="C06" class="control" width="64" height="64"></canvas>
+    <canvas id="C07" class="control" width="64" height="64"></canvas>
+    <canvas id="C10" class="control" width="64" height="64"></canvas>
+    <canvas id="C11" class="control" width="64" height="64"></canvas>
+    <canvas id="C12" class="control" width="64" height="64"></canvas>
+    <canvas id="C13" class="control" width="64" height="64"></canvas>
+    <canvas id="C14" class="control" width="64" height="64"></canvas>
+    <canvas id="C15" class="control" width="64" height="64"></canvas>
+    <canvas id="C16" class="control" width="64" height="64"></canvas>
+    <canvas id="C17" class="control" width="64" height="64"></canvas>
+    <canvas id="C20" class="control" width="64" height="64"></canvas>
+    <canvas id="C21" class="control" width="64" height="64"></canvas>
+    <canvas id="C22" class="control" width="64" height="64"></canvas>
+    <canvas id="C23" class="control" width="64" height="64"></canvas>
+    <canvas id="C24" class="control" width="64" height="64"></canvas>
+    <canvas id="C25" class="control" width="64" height="64"></canvas>
+    <canvas id="C26" class="control" width="64" height="64"></canvas>
+    <canvas id="C27" class="control" width="64" height="64"></canvas>
+    <canvas id="C30" class="control" width="64" height="64"></canvas>
+    <canvas id="C31" class="control" width="64" height="64"></canvas>
+    <canvas id="C32" class="control" width="64" height="64"></canvas>
+    <canvas id="C33" class="control" width="64" height="64"></canvas>
+    <canvas id="C34" class="control" width="64" height="64"></canvas>
+    <canvas id="C35" class="control" width="64" height="64"></canvas>
+    <canvas id="C36" class="control" width="64" height="64"></canvas>
+    <canvas id="C37" class="control" width="64" height="64"></canvas>
+  </div>
+</body>
+</html>
